@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3C36014A20AC05FD004B21BE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36014920AC05FD004B21BE /* main.swift */; };
+		3C36015120AC0619004B21BE /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36015020AC0619004B21BE /* Library.swift */; };
+		3C36015320AC061F004B21BE /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36015220AC061E004B21BE /* Book.swift */; };
+		3C36015520AC0624004B21BE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36015420AC0624004B21BE /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		3C36014620AC05FD004B21BE /* MediaLibrary */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MediaLibrary; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C36014920AC05FD004B21BE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3C36015020AC0619004B21BE /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		3C36015220AC061E004B21BE /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		3C36015420AC0624004B21BE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				3C36014920AC05FD004B21BE /* main.swift */,
+				3C36015020AC0619004B21BE /* Library.swift */,
+				3C36015220AC061E004B21BE /* Book.swift */,
+				3C36015420AC0624004B21BE /* Person.swift */,
 			);
 			path = MediaLibrary;
 			sourceTree = "<group>";
@@ -120,6 +129,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C36014A20AC05FD004B21BE /* main.swift in Sources */,
+				3C36015120AC0619004B21BE /* Library.swift in Sources */,
+				3C36015520AC0624004B21BE /* Person.swift in Sources */,
+				3C36015320AC061F004B21BE /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
