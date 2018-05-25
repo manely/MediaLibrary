@@ -78,7 +78,7 @@ class Library {
             
             var p = b.person!
             b.person = nil
-            if let indexOfBookInPersonsBooks = p.books.index(where: { b in b.title == book.title }) {
+            if let indexOfBookInPersonsBooks = p.indexOf(book: b) {
                 p.books.remove(at: indexOfBookInPersonsBooks)
             }
         }
