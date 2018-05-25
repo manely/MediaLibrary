@@ -9,16 +9,18 @@
 import Foundation
 
 enum LibraryError: Error {
-    indirect case checkIn(reason: LibraryError)
-    indirect case checkOutError(reason: LibraryError) 
     case unregisteredBook
     case unregisteredPerson
-}
     
+    enum CheckInError: Error {
+        case bookNotCheckedOut
+    }
+}
+
 class Library {
     var name: String = ""
-    private var listOfPeople: [Person] = [Person]()
-    private var listOfBooks: [Book] = [Book]()
+    var listOfPeople: [Person] = [Person]()
+    var listOfBooks: [Book] = [Book]()
     
     var people: [Person] {
         return listOfPeople
@@ -47,46 +49,51 @@ class Library {
     }
     
     func removePerson(_ person: Person) {
-        let index = listOfPeople.index { p in
-            p.name == person.name
-        }
-        if (index != nil) {
-            listOfPeople.remove(at: index!)
+        if let index = listOfPeople.index(where: { $0 == person }) {
+            listOfPeople.remove(at: index)
         }
     }
     
     func removeBook(_ book: Book) {
-        let index = listOfBooks.index { b in
-            b.title == book.title
+        if let index = listOfBooks.index(where: { $0 == book }) {
+            listOfBooks.remove(at: index)
         }
-        if (index != nil) {
-            listOfBooks.remove(at: index!)
+    }
+
+    func addBook(from container: [Book]) {
+        self.listOfBooks.append(contentsOf: container)
+    }
+    
+    func addPerson(from container: [Person]) {
+        self.listOfPeople.append(contentsOf: container)
+    }
+    
+    func checkOut(_ book: inout Book, to person: inout Person) throws {
+        if self.contains(book: book) {
+            if self.contains(person: person) {
+                person.addBook(&book)
+            }
+            else {
+                throw LibraryError.unregisteredPerson
+            }
+        }
+        else {
+            throw LibraryError.unregisteredBook
         }
     }
     
-    func checkOut(_ book: Book, to person: Person) {
-        let indexOfBook = self.indexOf(book: book)
-        let indexOfPerson = self.indexOf(person: person)
-        if indexOfBook != nil, indexOfPerson != nil {
-            var b = listOfBooks[indexOfBook!]
-            var p = listOfPeople[indexOfPerson!]
-            b.person = person
-            p.books.append(b)
-        }
-    }
-    
-    func checkIn(_ book: Book) {
+    func checkIn(_ book: inout Book) throws -> Person {
         if book.person == nil {
             // book is not checked out before; unable to checkIn
-            return
+            throw LibraryError.CheckInError.bookNotCheckedOut
         }
-        if let indexOfBook = self.indexOf(book: book) {
-            var b = listOfBooks[indexOfBook]            
-            var p = b.person!
-            p.removeBook(b)
-            b.person = nil
+        if self.contains(book: book) {
+            let index = self.indexOf(person: book.person!)
+            var person = listOfPeople[index!]
+            try person.removeBook(&book)
+            return person
         }
-        
+        throw LibraryError.unregisteredBook
     }
     
     func availableBooks() -> [Book] {
@@ -97,11 +104,19 @@ class Library {
         return listOfBooks.filter { $0.person != nil }
     }
     
+    func contains(book: Book) -> Bool {
+        return listOfBooks.contains(where: { $0 == book })
+    }
+    
+    func contains(person: Person) -> Bool {
+        return listOfPeople.contains(where: { $0 == person })
+    }
+    
     private func indexOf(book: Book) -> Int? {
-        return listOfBooks.index { b in b.title == book.title }
+        return listOfBooks.index { $0 == book }
     }
     
     private func indexOf(person: Person) -> Int? {
-        return listOfPeople.index { p in p.name == person.name }
+        return listOfPeople.index { $0 == person }
     }
 }
