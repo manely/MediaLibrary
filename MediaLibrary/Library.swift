@@ -73,16 +73,14 @@ class Library {
             // book is not checked out before; unable to checkIn
             return
         }
-        let indexOfBook = listOfBooks.index { b in b.title == book.title }
-        if indexOfBook == nil {
-            // book is not in the library
-            return
-        }
-        var b = listOfBooks[indexOfBook!]
-        var p = b.person!
-        b.person = nil
-        if let indexOfBookInPersonsBooks = p.books.index(where: { b in b.title == book.title }) {
-            p.books.remove(at: indexOfBookInPersonsBooks)
+        if let indexOfBook = self.indexOf(book: book) {
+            var b = listOfBooks[indexOfBook]
+            
+            var p = b.person!
+            b.person = nil
+            if let indexOfBookInPersonsBooks = p.books.index(where: { b in b.title == book.title }) {
+                p.books.remove(at: indexOfBookInPersonsBooks)
+            }
         }
         
     }
