@@ -94,4 +94,12 @@ class Library {
     func unAvailableBooks() -> [Book] {
         return listOfBooks.filter { $0.person != nil }
     }
+    
+    private func indexOf(book: Book) -> Int? {
+        return listOfBooks.index { b in b.title == book.title }
+    }
+    
+    private func indexOf(person: Person) -> Int? {
+        return listOfPeople.index { p in p.name == person.name }
+    }
 }
