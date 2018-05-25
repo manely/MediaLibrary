@@ -58,8 +58,8 @@ class Library {
     }
     
     func checkOut(_ book: Book, to person: Person) {
-        let indexOfBook = listOfBooks.index { b in b.title == book.title }
-        let indexOfPerson = listOfPeople.index { p in p.name == person.name }
+        let indexOfBook = self.indexOf(book: book)
+        let indexOfPerson = self.indexOf(person: person)
         if indexOfBook != nil, indexOfPerson != nil {
             var b = listOfBooks[indexOfBook!]
             var p = listOfPeople[indexOfPerson!]
