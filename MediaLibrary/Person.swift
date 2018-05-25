@@ -17,5 +17,14 @@ struct Person {
         return self.books.index(where: { b in b.title == book.title })
     }
     
+    mutating func addBook(_ book: Book) {
+        self.books.append(book)
+    }
+    
+    mutating func removeBook(_ book: Book) {
+        if let index = self.indexOf(book: book) {
+            self.books.remove(at: index)
+        }
+    }
 }
 

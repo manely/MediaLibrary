@@ -11,6 +11,13 @@
 		3C36015120AC0619004B21BE /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36015020AC0619004B21BE /* Library.swift */; };
 		3C36015320AC061F004B21BE /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36015220AC061E004B21BE /* Book.swift */; };
 		3C36015520AC0624004B21BE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36015420AC0624004B21BE /* Person.swift */; };
+		3C36015A20B0241E004B21BE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36015920B0241E004B21BE /* Account.swift */; };
+		3C36015C20B2F8F3004B21BE /* DynamicDispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36015B20B2F8F3004B21BE /* DynamicDispatch.swift */; };
+		3CE6DB8E20B7DA33002ADD5A /* MediaLibraryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE6DB8D20B7DA33002ADD5A /* MediaLibraryTest.swift */; };
+		3CE6DB9420B7DA9A002ADD5A /* LibraryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE6DB9320B7DA9A002ADD5A /* LibraryTest.swift */; };
+		3CE6DBFE20B7EDA1002ADD5A /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36015020AC0619004B21BE /* Library.swift */; };
+		3CE6DBFF20B7EDA1002ADD5A /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36015220AC061E004B21BE /* Book.swift */; };
+		3CE6DC0020B7EDA1002ADD5A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36015420AC0624004B21BE /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,10 +38,23 @@
 		3C36015020AC0619004B21BE /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		3C36015220AC061E004B21BE /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		3C36015420AC0624004B21BE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		3C36015920B0241E004B21BE /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		3C36015B20B2F8F3004B21BE /* DynamicDispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicDispatch.swift; sourceTree = "<group>"; };
+		3CE6DB8B20B7DA33002ADD5A /* MediaLibraryTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediaLibraryTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CE6DB8D20B7DA33002ADD5A /* MediaLibraryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaLibraryTest.swift; sourceTree = "<group>"; };
+		3CE6DB8F20B7DA33002ADD5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CE6DB9320B7DA9A002ADD5A /* LibraryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3C36014320AC05FD004B21BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CE6DB8820B7DA33002ADD5A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				3C36014820AC05FD004B21BE /* MediaLibrary */,
+				3CE6DB8C20B7DA33002ADD5A /* MediaLibraryTest */,
 				3C36014720AC05FD004B21BE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				3C36014620AC05FD004B21BE /* MediaLibrary */,
+				3CE6DB8B20B7DA33002ADD5A /* MediaLibraryTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,8 +89,28 @@
 				3C36015020AC0619004B21BE /* Library.swift */,
 				3C36015220AC061E004B21BE /* Book.swift */,
 				3C36015420AC0624004B21BE /* Person.swift */,
+				3CE6DB8620B7D9C1002ADD5A /* New Group */,
 			);
 			path = MediaLibrary;
+			sourceTree = "<group>";
+		};
+		3CE6DB8620B7D9C1002ADD5A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				3C36015B20B2F8F3004B21BE /* DynamicDispatch.swift */,
+				3C36015920B0241E004B21BE /* Account.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		3CE6DB8C20B7DA33002ADD5A /* MediaLibraryTest */ = {
+			isa = PBXGroup;
+			children = (
+				3CE6DB8D20B7DA33002ADD5A /* MediaLibraryTest.swift */,
+				3CE6DB9320B7DA9A002ADD5A /* LibraryTest.swift */,
+				3CE6DB8F20B7DA33002ADD5A /* Info.plist */,
+			);
+			path = MediaLibraryTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +133,23 @@
 			productReference = 3C36014620AC05FD004B21BE /* MediaLibrary */;
 			productType = "com.apple.product-type.tool";
 		};
+		3CE6DB8A20B7DA33002ADD5A /* MediaLibraryTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CE6DB9020B7DA33002ADD5A /* Build configuration list for PBXNativeTarget "MediaLibraryTest" */;
+			buildPhases = (
+				3CE6DB8720B7DA33002ADD5A /* Sources */,
+				3CE6DB8820B7DA33002ADD5A /* Frameworks */,
+				3CE6DB8920B7DA33002ADD5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediaLibraryTest;
+			productName = MediaLibraryTest;
+			productReference = 3CE6DB8B20B7DA33002ADD5A /* MediaLibraryTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -102,6 +161,9 @@
 				ORGANIZATIONNAME = Manely;
 				TargetAttributes = {
 					3C36014520AC05FD004B21BE = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					3CE6DB8A20B7DA33002ADD5A = {
 						CreatedOnToolsVersion = 9.3;
 					};
 				};
@@ -119,19 +181,44 @@
 			projectRoot = "";
 			targets = (
 				3C36014520AC05FD004B21BE /* MediaLibrary */,
+				3CE6DB8A20B7DA33002ADD5A /* MediaLibraryTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CE6DB8920B7DA33002ADD5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3C36014220AC05FD004B21BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C36015A20B0241E004B21BE /* Account.swift in Sources */,
 				3C36014A20AC05FD004B21BE /* main.swift in Sources */,
 				3C36015120AC0619004B21BE /* Library.swift in Sources */,
+				3C36015C20B2F8F3004B21BE /* DynamicDispatch.swift in Sources */,
 				3C36015520AC0624004B21BE /* Person.swift in Sources */,
 				3C36015320AC061F004B21BE /* Book.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CE6DB8720B7DA33002ADD5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CE6DC0020B7EDA1002ADD5A /* Person.swift in Sources */,
+				3CE6DBFF20B7EDA1002ADD5A /* Book.swift in Sources */,
+				3CE6DB8E20B7DA33002ADD5A /* MediaLibraryTest.swift in Sources */,
+				3CE6DB9420B7DA9A002ADD5A /* LibraryTest.swift in Sources */,
+				3CE6DBFE20B7EDA1002ADD5A /* Library.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +358,42 @@
 			};
 			name = Release;
 		};
+		3CE6DB9120B7DA33002ADD5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MediaLibraryTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.manely.MediaLibraryTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		3CE6DB9220B7DA33002ADD5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MediaLibraryTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.manely.MediaLibraryTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -288,6 +411,15 @@
 			buildConfigurations = (
 				3C36014E20AC05FD004B21BE /* Debug */,
 				3C36014F20AC05FD004B21BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CE6DB9020B7DA33002ADD5A /* Build configuration list for PBXNativeTarget "MediaLibraryTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CE6DB9120B7DA33002ADD5A /* Debug */,
+				3CE6DB9220B7DA33002ADD5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

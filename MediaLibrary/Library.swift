@@ -74,13 +74,10 @@ class Library {
             return
         }
         if let indexOfBook = self.indexOf(book: book) {
-            var b = listOfBooks[indexOfBook]
-            
+            var b = listOfBooks[indexOfBook]            
             var p = b.person!
+            p.removeBook(b)
             b.person = nil
-            if let indexOfBookInPersonsBooks = p.indexOf(book: b) {
-                p.books.remove(at: indexOfBookInPersonsBooks)
-            }
         }
         
     }
