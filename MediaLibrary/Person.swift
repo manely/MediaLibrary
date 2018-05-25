@@ -28,3 +28,8 @@ struct Person {
     }
 }
 
+extension Person {
+    init(name: String, age: Int8) {
+        self.init(name: name, age: age, books: [])
+    }
+}

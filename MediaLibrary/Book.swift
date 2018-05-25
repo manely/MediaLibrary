@@ -11,6 +11,11 @@ import Foundation
 struct Book {
     var title: String = ""
     var author: String = ""
-    var person: Person? 
+    var person: Person? = nil
 }
 
+extension Book {
+    init(title: String, author: String) {
+        self.init(title: title, author: author, person: nil)
+    }
+}

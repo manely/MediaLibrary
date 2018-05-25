@@ -10,7 +10,7 @@ import XCTest
 @testable import MediaLibrary
 
 class LibraryTest: XCTestCase {
-    var library: Library = Library()
+    var library: Library = Library(name: "Test")
     
     override func setUp() {
         super.setUp()
@@ -23,37 +23,37 @@ class LibraryTest: XCTestCase {
     }
 
     func testAddBook() {
-        let booksCount = library.listOfBooks.count
+        let booksCount = library.books.count
         let book = Book(title: "C#", author: "Mani Hamedani")
         library.addBook(book)
-        XCTAssertEqual(library.listOfBooks.count, booksCount + 1)
+        XCTAssertEqual(library.books.count, booksCount + 1)
     }
     
     func testAddPerson() {
-        let peopleCount = library.listOfPeople.count
+        let peopleCount = library.people.count
         let person = Person(name: "Mani Hamedani", age: 45)
         library.addPerson(person)
-        XCTAssertEqual(library.listOfPeople.count, peopleCount + 1)
+        XCTAssertEqual(library.people.count, peopleCount + 1)
     }
     
     func testRemoveBook() {
-        let booksCount = library.listOfBooks.count
+        let booksCount = library.books.count
         guard booksCount >= 0 else {
             return
         }
-        let book = library.listOfBooks.first
+        let book = library.books.first
         library.removeBook(book!)
-        XCTAssertEqual(library.listOfBooks.count, booksCount - 1)
+        XCTAssertEqual(library.books.count, booksCount - 1)
     }
 
     func testRemovePerson() {
-        let peopleCount = library.listOfPeople.count
+        let peopleCount = library.people.count
         guard peopleCount >= 0 else {
             return
         }
-        let person = library.listOfPeople.first
+        let person = library.people.first
         library.removePerson(person!)
-        XCTAssertEqual(library.listOfPeople.count, peopleCount - 1)
+        XCTAssertEqual(library.people.count, peopleCount - 1)
     }
 
 }

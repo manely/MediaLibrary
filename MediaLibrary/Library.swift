@@ -10,8 +10,8 @@ import Foundation
 
 class Library {
     var name: String = ""
-    var listOfPeople: [Person] = [Person]()
-    var listOfBooks: [Book] = [Book]()
+    private var listOfPeople: [Person] = [Person]()
+    private var listOfBooks: [Book] = [Book]()
     
     var people: [Person] {
         return listOfPeople
