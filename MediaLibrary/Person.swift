@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Person {
+struct Person: Equatable {
     var name: String = ""
     var age: Int8 = 18
     var books: [Book] = []
@@ -25,6 +25,10 @@ struct Person {
         if let index = self.indexOf(book: book) {
             self.books.remove(at: index)
         }
+    }
+    
+    static func == (lhs: Person, rhs: Person) -> Bool {
+        return lhs.name == rhs.name && lhs.age == rhs.age
     }
 }
 

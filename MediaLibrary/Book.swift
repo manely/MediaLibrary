@@ -8,10 +8,16 @@
 
 import Foundation
 
-struct Book {
+struct Book: Equatable {
+    
     var title: String = ""
     var author: String = ""
     var person: Person? = nil
+    
+    static func == (lhs: Book, rhs: Book) -> Bool {
+        return lhs.title == rhs.title && lhs.author == rhs.author
+    }
+    
 }
 
 extension Book {

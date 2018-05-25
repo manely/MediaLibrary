@@ -8,6 +8,13 @@
 
 import Foundation
 
+enum LibraryError: Error {
+    indirect case checkIn(reason: LibraryError)
+    indirect case checkOutError(reason: LibraryError) 
+    case unregisteredBook
+    case unregisteredPerson
+}
+    
 class Library {
     var name: String = ""
     private var listOfPeople: [Person] = [Person]()
