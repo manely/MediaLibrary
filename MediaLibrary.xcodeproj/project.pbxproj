@@ -18,6 +18,9 @@
 		3CE6DBFE20B7EDA1002ADD5A /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36015020AC0619004B21BE /* Library.swift */; };
 		3CE6DBFF20B7EDA1002ADD5A /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36015220AC061E004B21BE /* Book.swift */; };
 		3CE6DC0020B7EDA1002ADD5A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36015420AC0624004B21BE /* Person.swift */; };
+		3CE6DC0220B9B9E4002ADD5A /* Benchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE6DC0120B9B9E4002ADD5A /* Benchmark.swift */; };
+		3CE6DC0420B9BBB9002ADD5A /* MyFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE6DC0320B9BBB9002ADD5A /* MyFloat.swift */; };
+		3CE6DC0820C10CF7002ADD5A /* MemoryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE6DC0720C10CF7002ADD5A /* MemoryAddress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +47,9 @@
 		3CE6DB8D20B7DA33002ADD5A /* MediaLibraryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaLibraryTest.swift; sourceTree = "<group>"; };
 		3CE6DB8F20B7DA33002ADD5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CE6DB9320B7DA9A002ADD5A /* LibraryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTest.swift; sourceTree = "<group>"; };
+		3CE6DC0120B9B9E4002ADD5A /* Benchmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Benchmark.swift; sourceTree = "<group>"; };
+		3CE6DC0320B9BBB9002ADD5A /* MyFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFloat.swift; sourceTree = "<group>"; };
+		3CE6DC0720C10CF7002ADD5A /* MemoryAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryAddress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				3C36014920AC05FD004B21BE /* main.swift */,
+				3CE6DC0320B9BBB9002ADD5A /* MyFloat.swift */,
 				3C36015020AC0619004B21BE /* Library.swift */,
 				3C36015220AC061E004B21BE /* Book.swift */,
 				3C36015420AC0624004B21BE /* Person.swift */,
@@ -97,6 +104,8 @@
 		3CE6DB8620B7D9C1002ADD5A /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				3CE6DC0120B9B9E4002ADD5A /* Benchmark.swift */,
+				3CE6DC0720C10CF7002ADD5A /* MemoryAddress.swift */,
 				3C36015B20B2F8F3004B21BE /* DynamicDispatch.swift */,
 				3C36015920B0241E004B21BE /* Account.swift */,
 			);
@@ -202,8 +211,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C36015A20B0241E004B21BE /* Account.swift in Sources */,
+				3CE6DC0220B9B9E4002ADD5A /* Benchmark.swift in Sources */,
 				3C36014A20AC05FD004B21BE /* main.swift in Sources */,
 				3C36015120AC0619004B21BE /* Library.swift in Sources */,
+				3CE6DC0420B9BBB9002ADD5A /* MyFloat.swift in Sources */,
+				3CE6DC0820C10CF7002ADD5A /* MemoryAddress.swift in Sources */,
 				3C36015C20B2F8F3004B21BE /* DynamicDispatch.swift in Sources */,
 				3C36015520AC0624004B21BE /* Person.swift in Sources */,
 				3C36015320AC061F004B21BE /* Book.swift in Sources */,
